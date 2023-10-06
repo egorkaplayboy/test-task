@@ -80,7 +80,7 @@ const CourseDetailsArea = () => {
                               </div>
                               <div className="c-details-stu">
                                  <ul>
-                                    <li className="d-flex align-items-center"><img src="/assets/img/icon/c-details-02.png" alt="meta-icon"/> <span>2,35,687 Students</span></li>
+                                    <li className="d-flex align-items-center"><img src="/assets/img/icon/c-details-02.png" alt="meta-icon"/> <span>235,687 Students</span></li>
                                  </ul>
                               </div>
                            </div>
