@@ -9,8 +9,8 @@ const testimonial_data = [
     title: "Sr. UX/UI Designer",
     des: (
       <>
-        Dramatically supply transparent deliverab before & you backward comp
-        internal or "organic" sources.
+        "As an instructor at E-Pora, I've witnessed students' growth and passion
+        for learning firsthand. It's truly inspiring."
       </>
     ),
   },
@@ -21,8 +21,8 @@ const testimonial_data = [
     title: "Software Engineer",
     des: (
       <>
-        Dramatically supply transparent deliverab before & you backward comp
-        internal or "organic" sources.
+        "Teaching at E-Pora has been an incredible journey. I love sharing my
+        knowledge and helping students reach their full potential."
       </>
     ),
   },
@@ -33,8 +33,9 @@ const testimonial_data = [
     title: "Content Writer",
     des: (
       <>
-        Dramatically supply transparent deliverab before & you backward comp
-        internal or "organic" sources.
+        "E-Pora's commitment to quality education aligns perfectly with my
+        teaching philosophy. I'm proud to be a part of this innovative
+        platform."
       </>
     ),
   },
@@ -45,13 +46,12 @@ const testimonial_data = [
     title: "Content Writer",
     des: (
       <>
-        Dramatically supply transparent deliverab before & you backward comp
-        internal or "organic" sources.
+        "E-Pora is more than just an online platform; it's a community of
+        learners and creators. I'm honored to be a part of it."
       </>
     ),
   },
 ];
-
 
 // slider setting
 const setting = {

@@ -5,30 +5,28 @@ const feature_content = [
     id: 1,
     icon: "fi fi-rr-paper-plane",
     title: "Online Courses",
-    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+    des: "Our online courses provide you with convenient access to high-quality educational content from anywhere in the world. Learn at your own pace and on your schedule, allowing you to balance your studies with your other commitments.",
   },
   {
     id: 2,
     icon: "fi fi-rr-user",
     title: "Expert Trainer",
-    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+    des: "Benefit from the guidance of experienced trainers who are experts in their fields.Our instructors are dedicated to helping you master the subject matter and achieve your learning goals through personalized support and mentorship.",
   },
 
   {
     id: 3,
     icon: "fi fi-rr-document",
     title: "Get Certificate",
-    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+    des: "Upon successful completion of our courses, you will receive a certificate that validates your skills and knowledge. This credential can enhance your resume and open up new opportunities in your chosen field.",
   },
   {
     id: 4,
     icon: "fi fi-rr-calendar",
     title: "Life Time Access",
-    des: "Interactively provide access world class materials for unique catalysts for change my ocardinat.",
+    des: "Gain lifelong access to course materials and resources. Even after completing a course, you can revisit the content whenever you need to refresh your knowledge or stay up-to-date with the latest developments in your area of study.",
   },
 ];
-
-
 
 const FeatureArea = () => {
   return (
@@ -60,9 +58,7 @@ const FeatureArea = () => {
                     </div>
                     <div className="tpfea__text">
                       <h5 className="tpfea__title mb-20">{item.title}</h5>
-                      <p>
-                        {item.des}
-                      </p>
+                      <p>{item.des}</p>
                     </div>
                   </div>
                 </div>
