@@ -1,8 +1,7 @@
-import review_content from "@/src/data/review-data";
 import Link from "next/link";
 import { useState } from "react";
 
-const CourseDetailsArea = () => {
+const CourseDetailsArea = ({ reviewData }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   return (
@@ -192,7 +191,7 @@ const CourseDetailsArea = () => {
                     <h5 className="c-review-title mb-40">Review</h5>
                   </div>
                   <div className="course-reviewer-item-wrapper">
-                    {review_content.map((item, i) => (
+                    {reviewData && reviewData.map((item, i) => (
                       <div
                         key={i}
                         className="course-reviewer-item d-flex mb-25"

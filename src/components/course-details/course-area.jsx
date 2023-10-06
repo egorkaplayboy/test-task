@@ -2,7 +2,7 @@ import our_course_data from "@/src/data/our-course-data";
 import Link from "next/link";
 import React from "react";
 
-const CourseArea = () => {
+const CourseArea = ({ ourCourseData }) => {
   return (
     <>
       <section className="course-area mb-80">
@@ -15,7 +15,7 @@ const CourseArea = () => {
             </div>
           </div>
           <div className="row">
-            {our_course_data.slice(0, 3).map((item, i) => (
+            {ourCourseData.slice(0, 3).map((item, i) => (
               <div key={i} className="col-xl-4 col-lg-6 col-md-6">
                 <div
                   className="tpcourse mb-40 wow fadeInUp"
