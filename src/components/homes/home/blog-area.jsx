@@ -2,8 +2,7 @@ import blog_data from "@/src/data/blog-data";
 import Link from "next/link";
 import React from "react";
 
-
-const BlogArea = () => {
+const BlogArea = ({ blogData }) => {
   return (
     <>
       <section
@@ -20,7 +19,7 @@ const BlogArea = () => {
             </div>
           </div>
           <div className="row">
-            {blog_data.map((item) => (
+            {blogData.map((item) => (
               <div key={item.id} className="col-xl-4 col-md-6">
                 <div className="tp-blog mb-60">
                   <div className="tp-blog__thumb p-relative">

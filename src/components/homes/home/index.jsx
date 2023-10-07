@@ -12,20 +12,20 @@ import TestimonialArea from "./testimonial-area";
 import BlogArea from "./blog-area";
 import BrandArea from "../../../common/brand-area";
 
-const Home = () => {
+const Home = ({courseData, blogData}) => {
   return (
     <>
       <HeroBanner />
       <FeatureArea />
       <AboutArea />
       <CategoryArea />
-      <CourseArea />
+      <CourseArea courseData={courseData} />
       <ChooseArea />
       <CounterArea />
       <InstructorArea />
       <SuitableArea />
       <TestimonialArea />
-      <BlogArea />
+      <BlogArea blogData={blogData} />
       <BrandArea style_1={true} />
     </>
   );

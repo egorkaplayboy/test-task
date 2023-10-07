@@ -2,7 +2,7 @@ import course_data from "@/src/data/course-data";
 import Link from "next/link";
 import React from "react";
 
-const CourseArea = () => {
+const CourseArea = ({courseData}) => {
   return (
     <>
       <section
@@ -21,7 +21,7 @@ const CourseArea = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-            {course_data.map((item) => (
+            {courseData.map((item) => (
               <div key={item.id} className="col-xl-4 col-lg-6 col-md-6">
                 <div className="tpcourse mb-40">
                   <div className="tpcourse__thumb p-relative w-img fix">
