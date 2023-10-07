@@ -5,12 +5,12 @@ import Breadcrumb from "../bredcrumb/breadcrumb";
 import CounterArea from "../homes/home-3/counter-area";
 import CourseListArea from "./course-list-area";
 
-const CourseList = () => {
+const CourseList = ({courseListData}) => {
   return (
     <>
       <Breadcrumb title="Course List" subtitle="Course List" isDbbl="Course" />
       <FeatureArea style_about={true} />
-      <CourseListArea />
+      <CourseListArea courseListData={courseListData} />
       <SuitableArea style_2={true} />
       <CounterArea />
     </>

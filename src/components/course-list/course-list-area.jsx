@@ -1,8 +1,7 @@
-import course_list_data from "@/src/data/course-list-data";
 import Link from "next/link";
 import React from "react";
 
-const  CourseListArea = () => {
+const CourseListArea = ({ courseListData }) => {
   return (
     <>
       <section
@@ -271,12 +270,12 @@ const  CourseListArea = () => {
               </div>
             </div>
             <div className="col-lg-8 col-md-12 course-item-width ml-30">
-              {course_list_data.map((item, i) => (
+              {courseListData.map((item, i) => (
                 <div key={i} className="tpcourse tp-list-course mb-40">
                   <div className="row g-0">
                     <div className="col-xl-4 course-thumb-width">
                       <div className="tpcourse__thumb p-relative w-img fix">
-                        <Link href="/course-details">
+                        <Link href={`/course-list/${item.id}`}>
                           <img src={item.img} alt="course-thumb" />
                         </Link>
                       </div>
@@ -288,7 +287,7 @@ const  CourseListArea = () => {
                             <li>
                               <Link
                                 className={item.ct_color}
-                                href="/course-details"
+                                href={`/course-list/${item.id}`}
                               >
                                 {item.course_title}
                               </Link>
@@ -296,7 +295,7 @@ const  CourseListArea = () => {
                             <li>
                               <Link
                                 className={item.cn_color}
-                                href="/course-details"
+                                href={`/course-list/${item.id}`}
                               >
                                 {item.course_name}
                               </Link>
@@ -305,7 +304,7 @@ const  CourseListArea = () => {
                         </div>
                         <div className="tpcourse__ava-title mb-15">
                           <h4 className="tpcourse__title tp-cours-title-color">
-                            <Link href="/course-details">
+                            <Link href={`/course-list/${item.id}`}>
                               {item.title}
                             </Link>
                           </h4>

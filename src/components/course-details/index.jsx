@@ -4,7 +4,7 @@ import CounterArea from "../homes/home-3/counter-area";
 import CourseArea from "./course-area";
 import CourseDetailsArea from "./course-details-area";
 
-const CourseDetails = ({ reviewData, ourCourseData }) => {
+const CourseDetails = ({ reviewData, ourCourseData, course }) => {
   return (
     <>
       <Breadcrumb
@@ -12,7 +12,7 @@ const CourseDetails = ({ reviewData, ourCourseData }) => {
         subtitle="Course Details"
         isDbbl="Course"
       />
-      <CourseDetailsArea reviewData={reviewData} />
+      <CourseDetailsArea reviewData={reviewData} course={course} />
       <CourseArea ourCourseData={ourCourseData} />
       <CounterArea />
     </>

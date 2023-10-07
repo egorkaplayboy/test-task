@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const CourseDetailsArea = ({ reviewData }) => {
+const CourseDetailsArea = ({ reviewData, course }) => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-
   return (
     <>
       <section
@@ -16,15 +15,9 @@ const CourseDetailsArea = ({ reviewData }) => {
             <div className="col-lg-8 col-md-12">
               <div className="c-details-wrapper mr-25">
                 <div className="c-details-thumb p-relative mb-40">
-                  <img
-                    src="/assets/img/course/c-details-bg-01.jpg"
-                    alt="details-bg"
-                  />
+                  <img src={course.img} alt="details-bg" />
                   <div className="c-details-ava d-md-flex align-items-center">
-                    <img
-                      src="/assets/img/course/c-details-ava-01.png"
-                      alt="avata"
-                    />
+                    <img src={course.icon} alt="avata" />
                     <span>
                       By <a href="#">Emilia Jonas</a>
                     </span>
@@ -35,12 +28,12 @@ const CourseDetailsArea = ({ reviewData }) => {
                     <ul className="tpcourse__price-list d-flex align-items-center">
                       <li>
                         <a className="c-color-green" href="#">
-                          Design
+                          {course.course_title}
                         </a>
                       </li>
                       <li>
                         <a className="c-color-yellow" href="#">
-                          Development
+                          {course.course_name}
                         </a>
                       </li>
                     </ul>
@@ -48,8 +41,7 @@ const CourseDetailsArea = ({ reviewData }) => {
                   <div className="tpcourse__ava-title mb-25">
                     <h4 className="c-details-title">
                       <a href="#">
-                        Master Web Design in Adobe XD: Complete UI/UX
-                        Masterclass
+                        {course.title}
                       </a>
                     </h4>
                   </div>
@@ -57,7 +49,7 @@ const CourseDetailsArea = ({ reviewData }) => {
                     <ul className="d-flex align-items-center">
                       <li>
                         <div className="rating-gold d-flex align-items-center">
-                          <p>4.7</p>
+                          <p>{course.start_text}</p>
                           <i className="fi fi-ss-star"></i>
                           <i className="fi fi-ss-star"></i>
                           <i className="fi fi-ss-star"></i>
@@ -71,14 +63,14 @@ const CourseDetailsArea = ({ reviewData }) => {
                           src="/assets/img/icon/c-meta-01.png"
                           alt="meta-icon"
                         />{" "}
-                        <span>35 Classes</span>
+                        <span>{course.cls_text}</span>
                       </li>
                       <li>
                         <img
                           src="/assets/img/icon/c-meta-02.png"
                           alt="meta-icon"
                         />{" "}
-                        <span>291 Students</span>
+                        <span>{course.st_text}</span>
                       </li>
                     </ul>
                   </div>
@@ -191,32 +183,33 @@ const CourseDetailsArea = ({ reviewData }) => {
                     <h5 className="c-review-title mb-40">Review</h5>
                   </div>
                   <div className="course-reviewer-item-wrapper">
-                    {reviewData && reviewData.map((item, i) => (
-                      <div
-                        key={i}
-                        className="course-reviewer-item d-flex mb-25"
-                      >
-                        <div className="course-review-ava">
-                          <img src={item.img} alt="details-avata" />
-                        </div>
-                        <div className="course-review-content p-relative">
-                          <h5 className="course-ava-title mb-15">
-                            {item.name}
-                          </h5>
-                          <div className="tpcourse__rating-icon d-flex align-items-center mb-10">
-                            <i className="fi fi-ss-star"></i>
-                            <i className="fi fi-ss-star"></i>
-                            <i className="fi fi-ss-star"></i>
-                            <i className="fi fi-ss-star"></i>
-                            <i className="fi fi-rs-star"></i>
+                    {reviewData &&
+                      reviewData.map((item, i) => (
+                        <div
+                          key={i}
+                          className="course-reviewer-item d-flex mb-25"
+                        >
+                          <div className="course-review-ava">
+                            <img src={item.img} alt="details-avata" />
                           </div>
-                          <p>{item.review_text}</p>
-                          <div className="c-reviewer-time">
-                            <span>{item.review_time}</span>
+                          <div className="course-review-content p-relative">
+                            <h5 className="course-ava-title mb-15">
+                              {item.name}
+                            </h5>
+                            <div className="tpcourse__rating-icon d-flex align-items-center mb-10">
+                              <i className="fi fi-ss-star"></i>
+                              <i className="fi fi-ss-star"></i>
+                              <i className="fi fi-ss-star"></i>
+                              <i className="fi fi-ss-star"></i>
+                              <i className="fi fi-rs-star"></i>
+                            </div>
+                            <p>{item.review_text}</p>
+                            <div className="c-reviewer-time">
+                              <span>{item.review_time}</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
                   </div>
                 </div>
               </div>
@@ -239,7 +232,7 @@ const CourseDetailsArea = ({ reviewData }) => {
                 </div>
                 <div className="course-details-widget">
                   <div className="cd-video-price">
-                    <h3 className="pricing-video text-center mb-15">$29.99</h3>
+                    <h3 className="pricing-video text-center mb-15">${course.course_price}</h3>
                     <div className="cd-pricing-btn text-center mb-30">
                       <Link className="tp-vp-btn" href="/course-details">
                         Add To Cart
