@@ -15,7 +15,7 @@ const index = ({ reviewData, ourCourseData }) => {
 
 export default index;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const reviewData = await fetch("http://localhost:3000/api/review-data/").then(
     (res) => res.json()
   );
