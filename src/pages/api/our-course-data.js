@@ -4,6 +4,6 @@ export default function handler(req, res) {
   try {
     res.status(200).json(our_course_data);
   } catch (error) {
-    res.status(400).json(error);
+    res.status(400).json({message: "Our courses not found"});
   }
 }
